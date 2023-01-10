@@ -1,2 +1,17 @@
-# password-generator
-Password generator created using Javascript
+# Javascript : Random Password Generator
+Password generator created using Javascript.
+
+## Project Description
+
+The purpose of this project is to allow user to generate a random password based on their preferences for length of password and characters types required.
+The character type option includes lowercase letters, uppercase letters, numeric character and special charaters.
+
+## Link to the Deployed page
+
+
+## Technologies used
+
+HTML, CSS, Javascript
+
+## Screenshots
+
