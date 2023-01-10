@@ -7,7 +7,7 @@ The purpose of this project is to allow user to generate a random password based
 The character type option includes lowercase letters, uppercase letters, numeric character and special charaters.
 
 ## Link to the Deployed page
-
+https://yogi-88.github.io/password-generator/
 
 ## Technologies used
 
