@@ -90,6 +90,14 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  var passwordLength = parseInt(prompt("Enter the length of password you need to create"));
+  while (passwordLength < 10 || passwordLength > 64 ){
+    passwordLength = prompt("Password length should be between 10 and 64 and should be integer, Please enter correct integer for password length")
+    
+  }
+
+  return passwordLength;
+  
 
 }
 
@@ -100,6 +108,7 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+  var passwordOptions = getPasswordOptions();
 
 }
 
