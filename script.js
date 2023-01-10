@@ -100,6 +100,10 @@ function getPasswordOptions() {
   var confirmUpperCase = confirm("Do you need Upper case in your password?");
   var confirmNumeric = confirm("Do you need numeric characters in your password?");
   var confirmSpecialchars = confirm("Do you need Special characters in your password?");
+  // if (!confirmLowerCase && !confirmUpperCase && !confirmNumeric && !confirmSpecialchars) {
+  //   alert("You must choose at least one character type!")
+  //   return;
+  // }
   return {"passwordLength" : passwordLength,
           "confirmLowerCase" : confirmLowerCase,
           "confirmUpperCase" : confirmUpperCase,
@@ -130,9 +134,9 @@ function generatePassword() {
   if(passwordOptions["confirmSpecialchars"]) {
     possibleCharacters = possibleCharacters.concat(specialCharacters)
   }
-  // console.log(possibleCharacters);
-  // console.log(passwordOptions["passwordLength"]);
-  // console.log(getRandom[possibleCharacters]);
+  console.log(possibleCharacters);
+  console.log(passwordOptions["passwordLength"]);
+  console.log(getRandom(possibleCharacters));
 
 
  let password = "";
