@@ -95,8 +95,15 @@ function getPasswordOptions() {
     passwordLength = prompt("Password length should be between 10 and 64 and should be integer, Please enter correct integer for password length")
     
   }
-
+  var confirmLowerCase = confirm("Do you need Lower case in your password?");
+  var confirmUpperCase = confirm("Do you need Upper case in your password?");
+  var confirmNumeric = confirm("Do you need numeric characters in your password?");
+  var confirmSpecialchars = confirm("Do you need Special characters in your password?");
   return passwordLength;
+  return confirmLowerCase;
+  return confirmUpperCase;
+  return confirmNumeric;
+  return confirmSpecialchars;
   
 
 }
