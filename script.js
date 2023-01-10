@@ -99,30 +99,55 @@ function getPasswordOptions() {
   var confirmUpperCase = confirm("Do you need Upper case in your password?");
   var confirmNumeric = confirm("Do you need numeric characters in your password?");
   var confirmSpecialchars = confirm("Do you need Special characters in your password?");
-  return passwordLength;
-  return confirmLowerCase;
-  return confirmUpperCase;
-  return confirmNumeric;
-  return confirmSpecialchars;
+  return {
+    passwordLength: passwordLength,
+    confirmLowerCase: confirmLowerCase,
+    confirmUpperCase: confirmUpperCase,
+    confirmNumeric: confirmNumeric,
+    confirmSpecialchars: confirmSpecialchars,
+
+  };
   
 
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-  var randomElement = arr[Math.floor(Math.random() * arr.length)];
+  var randomElement = arr[Math.floor(Math.random() * arr.length)]
   
   return randomElement;
   
 
 }
 
+
 // Function to generate password with user input
 function generatePassword() {
   var passwordOptions = getPasswordOptions();
+  var possibleCharacters = [];
+  if (confirmLowerCase) {
+    possibleCharacters = possibleCharacters.concat(lowerCasedCharacters)
+  }
+  if (confirmUpperCase) {
+    possibleCharacters = possibleCharacters.concat(upperCasedCharacters)
+  }
+  if (confirmNumeric) {
+    possibleCharacters = possibleCharacters.concat(numericCharacters)
+  }
+  if(confirmSpecialchars){
+
+    possibleCharacters = possibleCharacters.concat(specialCharacters)
+  } 
+  // var password = "";
+  // for ( var i = 0; i < passwordOptions.length; i++) {
+  //   password = password + 
+  // }
+
+  
   
 
 }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
